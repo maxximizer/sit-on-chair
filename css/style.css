@@ -559,7 +559,7 @@ footer .container * {
     opacity: 1;
 }
 
-.aarrow-up {
+/*.aarrow-up {
 	width: 0;
 	height: 0;
 	border-left: 15px solid transparent;
@@ -571,6 +571,25 @@ footer .container * {
 }
 #show{
   position: relative;
+}*/
+ul{
+    padding: 0;
+}
+
+.menu ul{
+    list-style: none;
+    width: 100%;
+}
+
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+
+.menu>ul>li>ul{
+    display: none;
+    position: absolute;
+    width: 300px;
 }
 .kontenerek select {
   display: block;

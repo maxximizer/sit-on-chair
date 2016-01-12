@@ -1,8 +1,29 @@
 
+document.addEventListener("DOMContentLoaded", function(){
+    var listElements = document.querySelectorAll(".menu>ul>li");
 
-$("#show").on("mouseover", function(){
-    $(".sub-menu").toggle();
+    for(var i=0; i<listElements.length; i++){
+            console.log("i am in ")
+        listElements[i].addEventListener("mouseover", function(event){
+            var subList = this.querySelector("ul");
+            if(subList !== null){
+                subList.style.display = "block";
+            }
+        });
+
+        listElements[i].addEventListener("mouseout", function(event){
+                console.log("i am ut ")
+            var subList = this.querySelector("ul");
+            if(subList !== null){
+                subList.style.display = "none";
+            }
+        });
+    }
 });
+//$(".menu>ul>li").on("mouseover", function(){
+//    $(".sub-menu").toggle();
+  //  console.log("a");
+//});
 
 $("#pic1").on("mouseenter",function() {
 $("#pic1 .panel").toggle();
@@ -80,13 +101,17 @@ var priceOfTransportDisplay = $('#priceOfTransportDisplay');
     price=parseInt(color)+parseInt(type)+parseInt(material)+parseInt(transport);
 
     priceDisplay.text(price+'zl');
-    console.log(  color);
+
     priceOfTypeDisplay.text(type+'zl');
       if (typeof color !== 'undefined'){
     priceOfColorDisplay.text(color+'zl');
   }
+  if (typeof material !== 'undefined'){
     priceOfMaterialDisplay.text(material+'zl');
+  }
+  if (typeof transport !== 'undefined'){
     priceOfTransportDisplay.text(transport+'zl');
+  }
 });
 
 colorOfChair.on('change', function() {
@@ -112,9 +137,15 @@ priceDisplay.text(price+'zl');
 
 priceDisplay.text(price+'zl');
 priceOfTypeDisplay.text(type+'zl');
+  if (typeof color !== 'undefined'){
 priceOfColorDisplay.text(color+'zl');
+}
+if (typeof material !== 'undefined'){
 priceOfMaterialDisplay.text(material+'zl');
+}
+if (typeof transport !== 'undefined'){
 priceOfTransportDisplay.text(transport+'zl');
+}
 });
 
 materialOfChair.on('change', function() {
@@ -138,9 +169,15 @@ price=parseInt(color)+parseInt(type)+parseInt(material)+parseInt(transport);
 priceDisplay.text(price+'zl');
 priceDisplay.text(price+'zl');
 priceOfTypeDisplay.text(type+'zl');
+  if (typeof color !== 'undefined'){
 priceOfColorDisplay.text(color+'zl');
+}
+if (typeof material !== 'undefined'){
 priceOfMaterialDisplay.text(material+'zl');
+}
+if (typeof transport !== 'undefined'){
 priceOfTransportDisplay.text(transport+'zl');
+}
 });
 
 
@@ -163,11 +200,17 @@ console.log(material);
 console.log(material+color+type);
 price=parseInt(color)+parseInt(type)+parseInt(material)+parseInt(transport);
 priceDisplay.text(price+'zl');
-priceDisplay.text(price+'zl');
+
 priceOfTypeDisplay.text(type+'zl');
+  if (typeof color !== 'undefined'){
 priceOfColorDisplay.text(color+'zl');
+}
+if (typeof material !== 'undefined'){
 priceOfMaterialDisplay.text(material+'zl');
+}
+if (typeof transport !== 'undefined'){
 priceOfTransportDisplay.text(transport+'zl');
+}
 });
 
 });
