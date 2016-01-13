@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var listElements = document.querySelectorAll(".menu>ul>li");
 
     for(var i=0; i<listElements.length; i++){
-            console.log("i am in ")
+
         listElements[i].addEventListener("mouseover", function(event){
             var subList = this.querySelector("ul");
             if(subList !== null){
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
         });
 
         listElements[i].addEventListener("mouseout", function(event){
-                console.log("i am ut ")
+
             var subList = this.querySelector("ul");
             if(subList !== null){
                 subList.style.display = "none";
@@ -20,10 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     }
 });
-//$(".menu>ul>li").on("mouseover", function(){
-//    $(".sub-menu").toggle();
-  //  console.log("a");
-//});
+
 
 $("#pic1").on("mouseenter",function() {
 $("#pic1 .panel").toggle();
@@ -32,6 +29,15 @@ $("#pic1 .panel").toggle();
 $("#pic2").on("mouseenter",function() {
 $("#pic2 .panel").toggle();
 });
+
+$("#pic1").on("mouseout",function() {
+$("#pic1 .panel").toggle();
+});
+
+$("#pic2").on("mouseout",function() {
+$("#pic2 .panel").toggle();
+});
+
 
 var slideNo = 0;
 

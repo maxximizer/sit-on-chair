@@ -661,3 +661,17 @@ select{
   border: 1px solid #27c7ab;
   width:100%;
 }
+
+.kontenerek select{
+  heigth: 40px;
+  margin-top:34px;
+  font-size: 20px;
+  font-family: 'ralewaybold', sans-serif;
+  font-weight: lighter;
+}
+.kontenerek select::first-child{
+margin-top: 34px;
+}
+.checkbox label{
+  font-size: 20px;
+}

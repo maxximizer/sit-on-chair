@@ -162,10 +162,10 @@
                 <div class="kontenerek" >
 
                   <select id="typeOfChair" class="empty">
-                        <ption value="" class="placeholder" selected="selected">Wybierz typ</option>
-                        <option data-type1="100" value="clair" >Chair Clair</option>
-                        <option data-type1="300" value="margarita">Chair Margarita</option>
-                        <option data-type1="500" value="selena">Chair Selena</option>
+                        <option value="" class="placeholder" selected="selected">Wybierz typ</option>
+                        <option data-type1="100" value="clair">Clair</option>
+                        <option data-type1="300" value="margarita">Margarita</option>
+                        <option data-type1="500" value="selena">Selena</option>
                   </select>
 
 
@@ -179,12 +179,12 @@
                   <select id="materialOfChair" class="empty">
                         <option value="" class=placeholder selected="selected">Wybierz materiał</option>
                         <option data-material1="10" value="tkanina">tkanina</option>
-                        <option data-material1="100" value="skora">skra</option>
+                        <option data-material1="100" value="skora">skora</option>
                   </select>
                   <div>
                   <div class="checkbox">
                       <input  type="checkbox" id="transportOfChair">
-                      <label for="transportOfChair">Transport</label>
+                      <label for="transportOfChair" style="font-size: 30px;">Transport</label>
                   </div>
                 </div>
               </div>
@@ -194,10 +194,12 @@
                 </div>
     <!--Trzecii KONTENER -->
     <div class="kontenerek">
+      <p>Podsumowanie</p>
+
 <table>
-  <tr><td id="nameDisplay1"></td><td id="priceOfTypeDisplay"></td></tr>
-  <tr><td id="nameDisplay2"></td><td id="priceOfColorDisplay"></td></tr>
-  <tr><td id="nameDisplay3"></td><td id="priceOfMaterialDisplay"></td></tr>
+  <tr><td id="nameDisplay1">Twoj Fotel</td><td id="priceOfTypeDisplay"></td></tr>
+  <tr><td id="nameDisplay2">Kolor</td><td id="priceOfColorDisplay"></td></tr>
+  <tr><td id="nameDisplay3">Materiał</td><td id="priceOfMaterialDisplay"></td></tr>
   <tr><td>Transport</td><td id="priceOfTransportDisplay"></td></tr>
   <tr><td>Suma</td><td id="priceDisplay"></td></tr>
 </table>
